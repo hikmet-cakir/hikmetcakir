@@ -1,3 +1,3 @@
-INSERT INTO essay (id, title, content, subject, created_time, updated_time) VALUES (1, 'how to compile and run java app in command line interface', 'content description content description','java', '2022-10-13', '2022-10-13');
-INSERT INTO essay (id, title, content, subject, created_time, updated_time) VALUES (2, 'new incoming string methods with java 11', 'content description content description','java', '2022-10-13', '2022-10-13');
-INSERT INTO essay (id, title, content, subject, created_time, updated_time) VALUES (3, 'test test', 'content description content description','java', '2022-10-13', '2022-10-13');
+INSERT INTO essay (id, title, content, subject, created_time, updated_time) VALUES (101, 'how to compile and run java app in command line interface', 'content description content description','java', '2022-10-13', '2022-10-13');
+INSERT INTO essay (id, title, content, subject, created_time, updated_time) VALUES (102, 'new incoming string methods with java 11', 'content description content description','java', '2022-10-13', '2022-10-13');
+INSERT INTO essay (id, title, content, subject, created_time, updated_time) VALUES (103, 'test test', 'content description content description','java', '2022-10-13', '2022-10-13');

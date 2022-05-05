@@ -9,6 +9,7 @@ import org.mapstruct.Mappings;
 @Mapper(componentModel = "spring")
 public interface EssayMapper {
     @Mappings({
+            @Mapping(source = "id", target = "id"),
             @Mapping(source = "title", target = "title"),
             @Mapping(source = "content", target = "content"),
             @Mapping(source = "subject", target = "subject"),
@@ -18,6 +19,7 @@ public interface EssayMapper {
     SimpleEssay essayToSimpleEssay(Essay essay);
 
     @Mappings({
+            @Mapping(source = "id", target = "id"),
             @Mapping(source = "title", target = "title"),
             @Mapping(source = "content", target = "content"),
             @Mapping(source = "subject", target = "subject"),

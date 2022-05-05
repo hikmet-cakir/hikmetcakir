@@ -3,6 +3,7 @@ package com.hikmetcakir.dto;
 import java.time.LocalDateTime;
 
 public class SimpleEssay {
+    private Long id;
     private String title;
     private String content;
     private String subject;
@@ -58,5 +59,13 @@ public class SimpleEssay {
 
     public void setUpdatedTime(LocalDateTime updatedTime) {
         this.updatedTime = updatedTime;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
