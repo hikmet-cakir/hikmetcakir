@@ -1,6 +1,5 @@
 package com.hikmetcakir.util.response;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class BaseResponse {

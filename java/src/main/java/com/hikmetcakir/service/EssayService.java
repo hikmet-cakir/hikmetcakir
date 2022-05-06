@@ -9,6 +9,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+/**
+ * It's used for only essay operations
+ *
+ * @author Hikmet
+ * @since  05-05-2022+03:00
+ */
 @Service
 public class EssayService {
     private final EssayRepository essayRepository;
