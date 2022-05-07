@@ -4,8 +4,7 @@ import Footer from '../layouts/Footer'
 function Home() {
     return (
        <div>
-           <Header></Header>
-           <Footer></Footer>
+           <Header></Header> 
        </div>
     );
 }
