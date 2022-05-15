@@ -1,10 +1,9 @@
-import Header from '../layouts/Header'
-import Footer from '../layouts/Footer'
+import Header from '../layouts/Header' 
 
 function Home() {
     return (
        <div>
-           <Header></Header> 
+           <Header></Header>  
        </div>
     );
 }

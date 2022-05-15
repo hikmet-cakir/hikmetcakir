@@ -25,7 +25,7 @@ function AboutMe() {
           <CssBaseline />
           <Container maxWidth="md" sx={{padding:'103px'}}>
             <Box > 
-                <Grid container sx={{ bgcolor: '#ECECEC'  }}> 
+                <Grid container sx={{ bgcolor: '#ECECEC'  }}    > 
                     <Grid item xs={12}>
                         <h1>About Me</h1>
                     </Grid>
