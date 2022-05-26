@@ -4,23 +4,17 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Grid from '@mui/material/Grid';
+import Header from '../layouts/Header' 
 
 function AboutMe() {
-
-    var sectionStyle = {
-        width: "100%",
-        height: "400px",
-        backgroundImage: "url(${./ProfilAvatar.png})"
-      };
-
     return (
-        <div style={{  
+        <div style={{ 
             backgroundImage: "url(./backgroundaboutme.jpg)",
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat', 
             height: '652px'
-          }}> 
+          }}>  
         <React.Fragment>
           <CssBaseline />
           <Container maxWidth="md" sx={{padding:'103px'}}>

@@ -8,9 +8,9 @@ function App() {
   return (
     <div>
         <Route path="/"> <Home/> </Route>
-        <Route path="/about-me"> <AboutMe/> </Route>
-        <Route path="/javase"> <JavaSE/> </Route>
-        <Route path="/spring"> <Spring/> </Route>
+        <Route path="/about-me" component={AboutMe} />  
+        <Route path="/javase" component={JavaSE} /> 
+        <Route path="/spring" component={Spring} />  
     </div>
   );
 }
