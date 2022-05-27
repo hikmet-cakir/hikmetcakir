@@ -8,6 +8,7 @@ import Paper from '@mui/material/Paper';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import Header from '../layouts/Header' 
 
 function JavaSE() {
     const [essayJavaSE, setEssayJavaSE] = useState([]); 
@@ -40,6 +41,7 @@ function JavaSE() {
 
     return (
         <React.Fragment>
+            <Header/>
             <CssBaseline />
             <Container fixed>
                 {

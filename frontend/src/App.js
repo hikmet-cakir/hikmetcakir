@@ -7,7 +7,7 @@ import Spring from './components/Spring';
 function App() {
   return (
     <div>
-        <Route path="/"> <Home/> </Route>
+        <Route path="/home"> <Home/> </Route>
         <Route path="/about-me" component={AboutMe} />  
         <Route path="/javase" component={JavaSE} /> 
         <Route path="/spring" component={Spring} />  

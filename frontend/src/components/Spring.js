@@ -8,13 +8,14 @@ import Paper from '@mui/material/Paper';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import Header from '../layouts/Header' 
 
 function Spring() {
     const [essaySpring, setEssaySpring] = useState([]); 
 
-    useEffect(() => { fetchEssaysAboutJavaSE() }, []);
+    useEffect(() => { fetchEssaysAboutSpring() }, []);
 
-    async function fetchEssaysAboutJavaSE() {
+    async function fetchEssaysAboutSpring() {
         fetch('http://localhost:8080/essay/find/category/spring', {
             method: 'GET',
             headers:{
@@ -40,6 +41,7 @@ function Spring() {
 
     return (
         <React.Fragment>
+            <Header/>
             <CssBaseline />
             <Container fixed>
                 {
