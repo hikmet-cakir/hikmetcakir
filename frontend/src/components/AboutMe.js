@@ -16,6 +16,7 @@ function AboutMe() {
             height: '652px'
           }}>  
         <React.Fragment>
+          <Header/>
           <CssBaseline />
           <Container maxWidth="md" sx={{padding:'103px'}}>
             <Box > 
