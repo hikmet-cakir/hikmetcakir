@@ -12,7 +12,7 @@ function App() {
         <Route path="/about-me" component={AboutMe} />  
         <Route path="/javase" component={JavaSE} /> 
         <Route path="/spring" component={Spring} />  
-        <Route path="/essay" component={Essay} />  
+        <Route path="/essay/:essayId" component={Essay} />  
     </div>
   );
 }

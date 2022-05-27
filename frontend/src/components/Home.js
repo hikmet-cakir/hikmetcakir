@@ -1,5 +1,3 @@
-import Header from '../layouts/Header' 
-import React, { useState, useEffect } from 'react';
 import CssBaseline from '@mui/material/CssBaseline'; 
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid'; 
@@ -9,6 +7,8 @@ import Paper from '@mui/material/Paper';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import Header from '../layouts/Header' 
+import React, { useState, useEffect } from 'react';
 
 function Home() {
     const [genericEssay, setGenericEssay] = useState([]); 
@@ -39,10 +39,9 @@ function Home() {
         color: theme.palette.text.primary,
     }));
 
-    return (
-       <div>
-           <Header/>
-           <React.Fragment>
+    return ( 
+        <React.Fragment>
+            <Header/>
             <CssBaseline />
             <Container fixed>
                 {
@@ -68,9 +67,7 @@ function Home() {
                         )) 
                 }
             </Container>
-        </React.Fragment> 
-
-       </div>
+        </React.Fragment>
     );
 }
 
