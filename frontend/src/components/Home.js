@@ -58,7 +58,7 @@ function Home() {
                                         <Typography noWrap>{essay.title}</Typography>
                                     </Grid>
                                     <Grid item xs zeroMinWidth> 
-                                        <Link href="#" underline="hover">
+                                        <Link href={`/essay/${essay.id}`} underline="hover">
                                             Go to Essay
                                         </Link>
                                     </Grid>
