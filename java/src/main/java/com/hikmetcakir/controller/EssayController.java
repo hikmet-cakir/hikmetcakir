@@ -14,12 +14,34 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/essay")
+@CrossOrigin
 public class EssayController {
 
     private final EssayService essayService;
 
     public EssayController(EssayService essayService) {
         this.essayService = essayService;
+    }
+
+    /**
+     * It's used for take all essays
+     *
+     * @param category : exist essays' category information
+     * @return BaseResponse : It returns all exist Essays
+     */
+    @GetMapping("/find/category/{category}")
+    public BaseResponse findEssaysByCategory(@PathVariable String category) {
+        return essayService.findEssaysByCategory(category);
+    }
+
+    /**
+     * It's used for take all essays
+     *
+     * @return : BaseResponse with all exist Essays
+     */
+    @GetMapping("/find/all")
+    public BaseResponse findAllEssays() {
+        return essayService.findAllEssay();
     }
 
     /**

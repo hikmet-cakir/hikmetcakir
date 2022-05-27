@@ -23,7 +23,7 @@ public class BaseResponse {
     }
 
     public static BaseResponse createSuccessBaseResponse(Object item) {
-        return new BaseResponse("OPERATION SUCCESS", "FAIL", "1", List.of(item));
+        return new BaseResponse("OPERATION SUCCESS", "SUCCESS", "1", List.of(item));
     }
     public static BaseResponse createFailBaseResponse(String resultDesc) {
         return new BaseResponse(resultDesc, "FAIL", "1", null);

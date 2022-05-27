@@ -7,7 +7,9 @@ import com.hikmetcakir.repository.EssayRepository;
 import com.hikmetcakir.util.response.BaseResponse;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * It's used for only essay operations
@@ -64,5 +66,24 @@ public class EssayService {
         }
         essayRepository.deleteById(id);
         return new BaseResponse();
+    }
+
+    public BaseResponse findAllEssay() {
+        List<Essay> allEssays = essayRepository.findAll();
+        if(allEssays.isEmpty()) {
+            new BaseResponse("Any Essay was not Found!", "SUCCESS", "0", null);
+        }
+        return BaseResponse.createSuccessBaseResponse(allEssays);
+    }
+
+    public BaseResponse findEssaysByCategory(String category) {
+        List<Essay> essays = essayRepository.findBySubjectOrderByCreatedTimeDesc(category);
+        if(essays.isEmpty()) {
+            return new BaseResponse();
+        }
+        List<SimpleEssay> simpleEssays = essays.stream()
+                .map(essayMapper::essayToSimpleEssay)
+                .collect(Collectors.toList());
+        return BaseResponse.createSuccessBaseResponse(simpleEssays);
     }
 }
