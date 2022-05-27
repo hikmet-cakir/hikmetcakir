@@ -12,15 +12,7 @@ import Link from '@mui/material/Link';
 function JavaSE() {
     const [essayJavaSE, setEssayJavaSE] = useState([]); 
     
-    useEffect(() => { fetchEssaysAboutJavaSE() }, [])
-
-    const StyledPaper = styled(Paper)(({ theme }) => ({
-        backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-        ...theme.typography.body2,
-        padding: theme.spacing(2),
-        maxWidth: 1000,
-        color: theme.palette.text.primary,
-    })); 
+    useEffect(() => { fetchEssaysAboutJavaSE() }, []);
     
     async function fetchEssaysAboutJavaSE() {
         fetch('http://localhost:8080/essay/find/category/java', {
@@ -38,6 +30,14 @@ function JavaSE() {
         }); 
     };
    
+    const StyledPaper = styled(Paper)(({ theme }) => ({
+        backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+        ...theme.typography.body2,
+        padding: theme.spacing(2),
+        maxWidth: 1000,
+        color: theme.palette.text.primary,
+    })); 
+
     return (
         <React.Fragment>
             <CssBaseline />
