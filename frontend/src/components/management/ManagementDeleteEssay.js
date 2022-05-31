@@ -1,11 +1,12 @@
 import ManagementHeader from "../../layouts/ManagementHeader";
 
-function ManagementHome() {
+function ManagementDeleteEssay() {
     return (
         <div>
             <ManagementHeader/>
+            <h1>Management Delete Essay Page</h1>
         </div>
     );
 }
 
-export default ManagementHome;
+export default ManagementDeleteEssay;
