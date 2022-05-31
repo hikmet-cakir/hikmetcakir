@@ -19,7 +19,7 @@ public class BaseResponse {
         this.items = items;
     }
     public static BaseResponse createSuccessBaseResponse(List<Object> items) {
-        return new BaseResponse("OPERATION SUCCESS", "FAIL", "1", items);
+        return new BaseResponse("OPERATION SUCCESS", "SUCCESS", "1", items);
     }
 
     public static BaseResponse createSuccessBaseResponse(Object item) {
