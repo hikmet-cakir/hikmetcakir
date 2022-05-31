@@ -1,5 +1,4 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
+import React from 'react';
 import IconButton from '@mui/material/IconButton';
 import Input from '@mui/material/Input'; 
 import InputAdornment from '@mui/material/InputAdornment'; 
@@ -12,7 +11,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid'; 
 
-function ManagementAuth() {
+function ManagementAuth() {  
     const [values, setValues] = React.useState({
         amount: '',
         password: '',
@@ -35,11 +34,27 @@ function ManagementAuth() {
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
     };
-    
-    function hasAuthority() {
-        console.log(document.getElementById('standard-adornment-password').value);
-        console.log(document.getElementById('input-with-icon-adornment').value)
-    }
+      
+    async function hasAuthority() {
+        fetch('http://localhost:8080/management/has-permission', {
+            method: 'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify({
+                username:document.getElementById('input-with-icon-adornment').value,
+                password:document.getElementById('standard-adornment-password').value
+            })
+        })
+        .then(response => response.json())
+        .then(response => {
+            let hasPermission = response.resultStatus;
+            hasPermission === "SUCCESS" ?  console.log("Log In Operation Sucess") : console.log("Log In Operation Fail");
+        })
+        .catch(error => {
+            console.log("Something went to wrong!");
+        }); 
+    }; 
 
     return (
         <React.Fragment>

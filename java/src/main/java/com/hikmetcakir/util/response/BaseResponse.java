@@ -9,7 +9,7 @@ public class BaseResponse {
     private List<Object> items;
 
     public BaseResponse() {
-        this("OPERATION SUCESS", "SUCESS", "0", null);
+        this("OPERATION SUCESS", "SUCCESS", "0", null);
     }
 
     public BaseResponse(String resultDesc, String resultStatus, String resultCode, List<Object> items) {
