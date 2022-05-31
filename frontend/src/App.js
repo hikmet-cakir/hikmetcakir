@@ -5,6 +5,7 @@ import JavaSE from './components/JavaSE';
 import Spring from './components/Spring';
 import Essay from './components/Essay';
 import ManagementAuth from './components/management/ManagementAuth';
+import ManagementHome from './components/management/ManagementHome';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/essay/:essayId" component={Essay} />  
 
         <Route path="/management-auth" component={ManagementAuth} />  
+        <Route path="/management-home" component={ManagementHome} />  
     </div>
   );
 }

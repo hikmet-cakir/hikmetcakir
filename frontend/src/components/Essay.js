@@ -8,7 +8,7 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography'; 
 import Header from '../layouts/Header'
 import React, { useState, useEffect } from 'react';
-import {useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 
 function Essay() {

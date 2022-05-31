@@ -10,8 +10,11 @@ import Container from '@mui/material/Container';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid'; 
+import { useHistory } from "react-router-dom";
 
 function ManagementAuth() {  
+    const history = useHistory();
+
     const [values, setValues] = React.useState({
         amount: '',
         password: '',
@@ -49,7 +52,7 @@ function ManagementAuth() {
         .then(response => response.json())
         .then(response => {
             let hasPermission = response.resultStatus;
-            hasPermission === "SUCCESS" ?  console.log("Log In Operation Sucess") : console.log("Log In Operation Fail");
+            hasPermission === "SUCCESS" ?  history.push("/management-home") : console.log("Log In Operation Fail");
         })
         .catch(error => {
             console.log("Something went to wrong!");
