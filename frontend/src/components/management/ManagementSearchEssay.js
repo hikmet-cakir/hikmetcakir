@@ -14,6 +14,25 @@ function ManagementSearchEssay() {
 
     const [startDate, setStartDate] = useState(new Date());
 
+    const [essay, setEssay] = useState([]);
+ 
+    async function fetchEssayById() {
+        const essayId = document.getElementById('essayId').value;
+        fetch('http://localhost:8080/essay/find/' + essayId, {
+            method: 'GET',
+            headers:{
+                'Content-Type':'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(response => {
+            setEssay(response.items);
+        })
+        .catch(error => {
+            console.log("Something went to wrong!");
+        }); 
+    };
+
     return (
         <React.Fragment>
         <ManagementHeader/>    
@@ -21,8 +40,8 @@ function ManagementSearchEssay() {
         <Container maxWidth="md">
             <Grid container spacing={2} >
                 <Grid item xs={6}>     
-                    <TextField id="text-field-search-by-id" label="ID" variant="standard" />
-                    <Button variant="contained" size="medium">Search</Button>
+                    <TextField id="essayId" label="ID" variant="standard" />
+                    <Button variant="contained" size="medium" onClick={() => { fetchEssayById() }}>Search</Button>
                 </Grid> 
                 <Grid item xs={6}>     
                     <TextField id="text-field-search-by-subject" label="Subject" variant="standard" />
@@ -37,7 +56,44 @@ function ManagementSearchEssay() {
                 </Grid>
                 <Grid item xs={3}>
                     <Button variant="contained" size="medium">Search</Button> 
-                </Grid>  
+                </Grid> 
+
+            {
+                essay === null ? null :
+                <Grid item xs={4}>     
+                    <TextField 
+                        id="text-field-search-by-subject" 
+                        value={essay[0].subject} 
+                        label="Subject"
+                        variant="outlined" 
+                    /> 
+                </Grid>   
+            }    
+            {
+                essay === null ? null :
+                <Grid item xs={4}>     
+                    <TextField 
+                        id="text-field-search-by-subject" 
+                        value={essay[0].title} 
+                        label="Title"
+                        variant="outlined" 
+                    /> 
+                </Grid>   
+            }
+            {
+                essay === null ? null :  
+                <Grid item xs={7}>     
+                <TextField 
+                    sx={{ m: 0, width: '100ch' }}
+                    id="outlined-multiline-static"
+                    label="Multiline"
+                    value={essay[0].content}
+                    multiline
+                    rows={10}
+                    variant="outlined"
+                />
+                </Grid>
+            }       
             </Grid> 
         </Container>
         </React.Fragment>
