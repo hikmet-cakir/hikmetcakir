@@ -8,19 +8,12 @@ import Header from '../layouts/Header'
 
 function AboutMe() {
     return (
-        <div style={{ 
-            backgroundImage: "url(./backgroundaboutme.jpg)",
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat', 
-            height: '652px'
-          }}>  
         <React.Fragment>
           <Header/>
           <CssBaseline />
           <Container maxWidth="md" sx={{padding:'103px'}}>
-            <Box > 
-                <Grid container sx={{ bgcolor: '#ECECEC'  }}    > 
+            <Box sx={{ backgroundColor: '#2196f3', borderRadius: '16px' }}> 
+                <Grid container sx={{padding:'10px'}}> 
                     <Grid item xs={12}>
                         <h1>About Me</h1>
                     </Grid>
@@ -34,7 +27,6 @@ function AboutMe() {
             </Box>
           </Container>
         </React.Fragment>
-        </div>
     );
 }
 
